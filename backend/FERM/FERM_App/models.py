@@ -17,7 +17,7 @@ class Fire(models.Model):
 class Resource(models.Model):
     id = models.AutoField(primary_key=True)
     designation = models.CharField( max_length=50)
-    resource_type = models.ManytoManyField('Resource_Type', blank=True)
+    resource_type = models.ManyToManyField('Resource_Type', blank=True)
     platform = models.ManyToManyField('Platform', blank=True)
     location = models.CharField(max_length=100)
     coords = models.CharField(max_length=50)    # fix this to require correct formatting
@@ -34,11 +34,11 @@ class Resource_Type(models.Model):
 
 class Platform(models.Model):
     platform = models.CharField(max_length=100)
-    
+
     def __str__(self):
         return self.platform
 
-class Status(model.Models):
+class Status(models.Model):
     status = models.CharField(max_length=100)
 
     def __str__(self):

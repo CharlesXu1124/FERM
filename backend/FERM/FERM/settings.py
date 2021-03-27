@@ -27,7 +27,7 @@ SECRET_KEY = '=p+41oyq#l(o=^6h3btah*9#e3!hwi^j$@j*l^a5bbtt^zjbw4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0','.localhost']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'FERM',
+    'FERM_App',
     'rest_framework',
 ]
 
@@ -81,10 +82,14 @@ DATABASES = {
     'default': {
         'ENGINE' : 'django_cockroachdb',
         'USER' : 'jo',
-        'PASSWORD': 'WRqMsLRwpeqR5mDh',
+        'PASSWORD': 'jG1WKQsFHKZHAj_l',
         'HOST' : 'free-tier.gcp-us-central1.cockroachlabs.cloud',
         'PORT' : 26257,
-        'NAME' : 'bank',
+        'NAME' : 'hackor-dreamteam-1529.defaultdb',
+        'OPTIONS': {
+            'sslmode': 'verify-full',
+            'sslrootcert': r'C:\Users\joeom\Desktop\FERM\CockroachDB\cc-ca.crt',
+        }
         },
 }
 

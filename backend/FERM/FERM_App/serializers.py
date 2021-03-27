@@ -4,27 +4,27 @@ from FERM_App import models
 class Resource_TypeSerializer(serializers.ModelSerializer):
     class Meta:
         fields = (
-            'id',
+            # 'id',
             'resource_type',
-            'associated_platforms',
+            # 'associated_platforms',
         )
         model = models.Resource_Type
 
 class PlatformSerializer(serializers.ModelSerializer):
     class Meta:
         fields = (
-            'id',
+            # 'id',
             'platform',
-            'resource_type',
+            # 'resource_type',
         )
         model = models.Platform
 
 class StatusSerializer(serializers.ModelSerializer):
     class Meta:
         fields = (
-            'id',
+            # 'id',
             'status',
-            'designations_with_this_status',
+            # 'associated_designations',
         )
         model = models.Status
 

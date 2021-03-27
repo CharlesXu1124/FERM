@@ -16,7 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from FERM_App import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
+    path('resources/', views.ListResources.as_view(), name='resources'),
+    path('platforms/', views.ListPlatform.as_view(), name='platforms'),
+    path('status/', views.ListStatus.as_view(), name='status'),
+    path('resourcetypes/', views.ListResource_Type.as_view(), name='resourcetype'),
 ]
