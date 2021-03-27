@@ -19,7 +19,7 @@ a {
     background-color: lightcoral;
     border-bottom: 30px solid white;
     color:white;
-    height:100px;
+    height:95px;
 }
 
 .container {
@@ -28,6 +28,14 @@ a {
     overflow: auto;
     padding: 0 40px;
 }
+
+.header {
+    font-size: 11px;
+    margin: 0;
+    line-height: 0px;
+}
+
+.navtitle { font-size: 25px;}
 
 .navbar ul {
     display: flex;
@@ -53,8 +61,11 @@ h3 { font-size: 20px; }
     background-color: lightgray;
     padding: 15px 10px;
     width: 260px;
-    font-size: 12px;
+    font-size: 14px;
 }
+
+h2 { font-size: 25px;}
+h3 { font-size: 18px;}
 
 thead, tbody {
     display: block;
@@ -76,4 +87,9 @@ tbody {
 .grid {
     display: grid;
     grid-template-columns: 30% 70%;
+}
+
+/* Selecting a location */
+.selected {
+    background-color: lightgray;
 }
