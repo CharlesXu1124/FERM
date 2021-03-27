@@ -14,10 +14,12 @@ a {
     color: black;
 }
 
+/* Navbar */
 .navbar {
     background-color: lightcoral;
+    border-bottom: 30px solid white;
     color:white;
-    height:70px;
+    height:100px;
 }
 
 .container {
@@ -42,4 +44,36 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Fire Reports Menu */
+h3 { font-size: 20px; }
+
+.reports {
+    background-color: lightgray;
+    padding: 15px 10px;
+    width: 260px;
+    font-size: 12px;
+}
+
+thead, tbody {
+    display: block;
+}
+
+tbody {
+    height: 300px;
+    background-color: white;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+/* Map */
+.mapping {
+    background-color: lightgray;
+    padding: 15px
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
 }
