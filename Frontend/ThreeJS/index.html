@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FERM</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="container flex">
+            <div class="header">
+                <h1 class="navtitle">FERM</h1>
+                <p>Firefighter Emergency Rescue Management</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="stats.html">Statistics</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!--Fire reports and Map-->
+    <div class="main">
+        <div class="container grid">
+            <div class="reports">
+                <h2>Fire Reports</h2>
+                <p><em>Needs Response</em></p>
+                <table class="table table-hover">
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                <h3>College of Computing</h3>
+                                <p>123 Main St.</br>College Park, MD</p>
+                                <p><em>3:02 PM</em></p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <h3>College of Engineering</h3>
+                                <p>444 Main St.</br>College Park, MD</p>
+                                <p><em>12:56 PM</em></p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <h3>College of Design</h3>
+                                <p>123 Amazon S.</br>Capitol Hill, WA</p>
+                                <p><em>9:22 AM</em></p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <h3>Unknown</h3>
+                                <p>National Park</br>LA, CA</p>
+                                <p><em>8:30 AM</em></p>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- <div class="mapping">
+                <h2>Map</h2>
+                <p><iframe width="680" height="334" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe></p>
+            </div> -->
+        </div>
+    </div>
+
+    <canvas class="webgl"></canvas>
+    <div>
+        <div class="loading-bar"></div>
+        
+        <div class="point point-0">
+            <div class="label">Seattle</div>
+            <div class="text" id="city1FireChance">Chance of fire: 5%</div>
+        </div>
+        <div class="point point-1">
+            <div class="label">Portland</div>
+            <div class="text" id="city2FireChance">Chance of fire: 8%</div>
+        </div>
+        <div class="point point-2">
+            <div class="label">LA</div>
+            <div class="text" id="city3FireChance">Chance of fire: 10%</div>
+        </div>
+
+        <div class="point point-3">
+            <div class="label">UAV</div>
+            <div class="image-uav"></div>
+            <div class="text" id="uavStatus">Idle: 5, Deployed: 0</div>
+        </div>
+
+        <div class="point point-4">
+            <div class="label">Drone</div>
+            <div class="image-drone"></div>
+            <div class="text" id="uavStatus">Idle: 100, Deployed: 30</div>
+        </div>
+
+        <div class="point point-5">
+            <div class="label">Truck</div>
+            <div class="image-truck"></div>
+            <div class="text" id="uavStatus">Idle: 10, Deployed: 5</div>
+        </div>
+    </div>
+
+</body>
+</html>

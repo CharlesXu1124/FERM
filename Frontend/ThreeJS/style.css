@@ -1,0 +1,247 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    overflow: hidden;
+}
+
+/* body {
+    color: black;
+    line-height: 1.6;
+} */
+
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    z-index: -9999;
+}
+
+.loading-bar
+{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.5s;
+    will-change: transform;
+}
+
+.loading-bar.ended
+{
+    transform: scaleX(0);
+    transform-origin: top right;
+    transition: transform 1.5s ease-in-out;
+}
+
+.point
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.point .label
+{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #00000077;
+    color: #ffffff;
+    font-family: Helvetica, Arialsans-serif;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 100;
+    font-size: 14px;
+    cursor: help;
+    transform: scale(0.001, 0.001);
+    transition: transform 0.3s;
+}
+
+.point:hover .image-uav
+{
+    transform: scale(0.2, 0.2);
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.point:hover .image-drone
+{
+    transform: scale(0.2, 0.2);
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.point:hover .image-truck
+{
+    transform: scale(0.2, 0.2);
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.point:hover .text
+{
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.point.visible .label
+{
+    transform: scale(1, 1);
+}
+
+.point .text
+{
+    position: absolute;
+    top: 30px;
+    left: -120px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 4px;
+    background: #00000077;
+    color: #ffffff;
+    font-family: Helvetica, Arialsans-serif;
+    text-align: center;
+    line-height: 1.3em;
+    font-weight: 100;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.point .image-uav
+{
+    top: 50px;
+    left: 100px;
+    width: 200px;
+    padding: 0px;
+    border-radius: 4px;
+    height: 50vh; /*height of your image*/
+    margin:0; /* If you want no margin */
+    padding:0; /*if your want to padding */
+    opacity: 0;
+    background-image: url('https://raw.githubusercontent.com/CharlesXu1124/AdaEye/master/uav.png');
+    background-size: 200px 100px;
+    background-repeat: no-repeat;
+}
+
+.point .image-drone
+{
+    top: 50px;
+    left: 100px;
+    width: 200px;
+    padding: 0px;
+    border-radius: 4px;
+    height: 50vh; /*height of your image*/
+    margin:0; /* If you want no margin */
+    padding:0; /*if your want to padding */
+    opacity: 0;
+    background-image: url('https://raw.githubusercontent.com/CharlesXu1124/AdaEye/master/fire_drone.jpg');
+    background-size: 200px 100px;
+    background-repeat: no-repeat;
+}
+
+.point .image-truck
+{
+    top: 50px;
+    left: 100px;
+    width: 200px;
+    padding: 0px;
+    border-radius: 4px;
+    height: 50vh; /*height of your image*/
+    margin:0; /* If you want no margin */
+    padding:0; /*if your want to padding */
+    opacity: 0;
+    background-image: url('https://raw.githubusercontent.com/CharlesXu1124/AdaEye/master/firefighter.jpg');
+    background-size: 200px 100px;
+    background-repeat: no-repeat;
+}
+
+/* Navbar */
+.navbar {
+    background-color: lightcoral;
+    border-bottom: 30px solid white;
+    color:white;
+    height:95px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar a {
+    color:white;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navtitle { font-size: 25px;}
+
+iframe {
+	z-index	: -9999;
+	position: absolute;
+	top	: 0;
+	left	: 0;
+	width	: 100%;
+	height	: 100%;
+	margin	: 0;
+	padding	: 0;
+}
+
+.reports {
+    background-color: lightgray;
+    padding: 15px 10px;
+    width: 260px;
+    font-size: 14px;
+}
+
+h2 { font-size: 25px;}
+h3 { font-size: 18px;}
+
+.grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+/* Selecting a location */
+.selected {
+    background-color: lightgray;
+}
+
+thead, tbody {
+    display: block;
+}
+
+tbody {
+    height: 300px;
+    background-color: white;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
