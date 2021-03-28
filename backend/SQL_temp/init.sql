@@ -1,0 +1,29 @@
+CREATE TABLE Resources
+(
+	resource_id VARCHAR(64) PRIMARY KEY NOT NULL,
+	title VARCHAR(60) NOT NULL,
+	r_type VARCHAR(60) NOT NULL,
+    deployed INTEGER NOT NULL,
+    create_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    latitude DECIMAL(20,7) NOT NULL,
+	longitude DECIMAL(20,7) NOT NULL,
+);
+
+CREATE TABLE Fire
+(
+	report_id VARCHAR(64) PRIMARY KEY NOT NULL,
+	brief VARCHAR(200) NOT NULL,
+    create_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    latitude DECIMAL(20,7) NOT NULL,
+	longitude DECIMAL(20,7) NOT NULL,
+);
+
+CREATE TABLE FirefightingOperation
+(
+	operation_id VARCHAR(64) PRIMARY KEY NOT NULL,
+	resource_id VARCHAR(200) NOT NULL,
+    fire_id VARCHAR(200) NOT NULL,
+    operation_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+);
+
+
